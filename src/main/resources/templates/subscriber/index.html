@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Subscriber List</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+  <link th:href="@{style.css}" th:rel="stylesheet" />
+</head>
+<body>
+<h1>Welcome to Our Awesome Site!</h1>
+<h3>Subscribe to our List. Sign-up below!</h3>
+
+
+<p>Please use the form below to sign up as a subscriber:</p>
+
+
+<form action="#" th:action="@{/}" th:object="${subscriber}" method="post">
+  <div class="row mb-4">
+    <div class="col">
+      <div class="form-outline">
+        <input type="text" th:field="*{firstName}" id="form1" class="form-control"/>
+        <label class="form-label" for="form1">First name</label>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-outline">
+        <td><input type="text" th:field="*{lastName}" id="form2" class="form-control" /></td>
+        <label class="form-label" for="form2">Last name</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- User Name -->
+  <div class="form-outline mb-4">
+    <input type="text" th:field="*{userName}" id="form3" class="form-control"  />
+    <label class="form-label" for="form3">User Name</label>
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Submit Your Name</button>
+</form>
+
+
+
+
+
+</body>
+</html>
